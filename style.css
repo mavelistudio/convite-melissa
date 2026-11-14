@@ -1,0 +1,545 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --rosa: #e9a0a8;
+  --rosa-escuro: #bd6873;
+  --creme: #fff8e9;
+  --marrom: #704b37;
+  --marrom-escuro: #493023;
+  --dourado: #d4a45e;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--creme);
+  color: var(--marrom);
+  overflow: hidden;
+}
+
+.escondido {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Luckiest Guy', cursive;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.8;
+}
+
+/* ABERTURA */
+
+.abertura {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  background:
+    linear-gradient(rgba(255, 248, 233, 0.35), rgba(255, 248, 233, 0.5)),
+    url("fundo-boiadeirinha.png") center/cover no-repeat;
+}
+
+.abertura-conteudo {
+  width: 100%;
+  max-width: 500px;
+  padding: 45px 25px;
+  background: rgba(255, 248, 233, 0.88);
+  border: 3px solid var(--dourado);
+  border-radius: 25px;
+  box-shadow: 0 10px 35px rgba(73, 48, 35, 0.15);
+  animation: aparecer 1s ease;
+}
+
+.pequeno-texto,
+.subtitulo {
+  color: var(--rosa-escuro);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.abertura h1 {
+  color: var(--rosa-escuro);
+  font-size: clamp(3rem, 12vw, 5rem);
+  margin: 15px 0 5px;
+}
+
+.abertura h2 {
+  color: var(--marrom);
+  font-size: 2rem;
+}
+
+.frase-abertura {
+  margin: 20px 0 25px;
+}
+
+.botao-abrir {
+  border: none;
+  background: var(--rosa-escuro);
+  color: white;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-abrir:hover {
+  background: var(--marrom);
+  transform: scale(1.05);
+}
+
+/* PÁGINAS CLICÁVEIS */
+
+.convite {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+  overflow: hidden;
+}
+
+.pagina {
+  display: none;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  padding-bottom: 85px;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagina.ativa {
+  display: flex;
+  animation: aparecer 0.5s ease;
+}
+
+/* HERO */
+
+.hero {
+  padding: 35px 20px 90px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 248, 233, 0.35), rgba(255, 248, 233, 0.5)),
+    url("fundo-boiadeirinha.png") center/cover no-repeat;
+}
+
+.hero-conteudo {
+  width: 100%;
+  max-width: 650px;
+  padding: 30px 25px;
+  background: rgba(255, 248, 233, 0.88);
+  border: 2px solid var(--dourado);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(73, 48, 35, 0.12);
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 11vw, 5rem);
+  color: var(--rosa-escuro);
+  margin-top: 10px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.foto-principal {
+  width: min(250px, 65%);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid white;
+  outline: 3px solid var(--dourado);
+  margin: 8px auto 18px;
+  display: block;
+  box-shadow: 0 8px 25px rgba(73, 48, 35, 0.2);
+}
+
+.texto-hero {
+  max-width: 500px;
+  margin: 0 auto 12px;
+}
+
+.destaque-hero {
+  font-weight: 700;
+  color: var(--rosa-escuro);
+}
+
+/* HISTÓRIA */
+
+.historia {
+  padding: 35px 20px 90px;
+  text-align: center;
+  background: var(--creme);
+}
+
+.historia-conteudo {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  padding: 40px 30px;
+  border: 2px dashed var(--dourado);
+  border-radius: 25px;
+  background: #fffdf7;
+}
+
+.historia h2 {
+  font-size: clamp(2rem, 7vw, 3rem);
+  color: var(--rosa-escuro);
+  margin: 15px 0 25px;
+}
+
+.historia p + p {
+  margin-top: 15px;
+}
+
+/* EVENTO */
+
+.evento {
+  padding: 25px 20px 90px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 248, 233, 0.5), rgba(255, 248, 233, 0.6)),
+    url("fundo-boiadeirinha.png") center/cover no-repeat;
+}
+
+.evento-conteudo {
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  padding: 25px;
+  background: rgba(255, 253, 247, 0.94);
+  border: 2px solid var(--dourado);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(73, 48, 35, 0.12);
+}
+
+.evento h2 {
+  color: var(--rosa-escuro);
+  font-size: clamp(2rem, 7vw, 3rem);
+  margin: 10px 0 20px;
+}
+
+.card-local {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.informacao-evento {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 18px;
+  border-radius: 15px;
+  background: #fff5e8;
+  border: 1px solid #ead5b5;
+}
+
+.icone {
+  font-size: 1.8rem;
+}
+
+.informacao-evento strong {
+  color: var(--rosa-escuro);
+  font-size: 0.9rem;
+}
+
+.informacao-evento p {
+  font-weight: 500;
+}
+
+/* CONTAGEM REGRESSIVA */
+
+.contagem {
+  margin-top: 25px;
+}
+
+.contagem h3 {
+  font-size: 1.7rem;
+  color: var(--rosa-escuro);
+  margin-bottom: 15px;
+}
+
+.contador {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.tempo {
+  padding: 14px 8px;
+  background: var(--rosa-escuro);
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tempo span {
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-weight: 700;
+}
+
+.tempo small {
+  font-size: 0.75rem;
+}
+
+.mensagem-contagem {
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--rosa-escuro);
+}
+
+/* FINAL */
+
+.final {
+  padding: 35px 20px 90px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255, 248, 233, 0.4), rgba(255, 248, 233, 0.55)),
+    url("fundo-boiadeirinha.png") center/cover no-repeat;
+}
+
+.final-conteudo {
+  max-width: 600px;
+  width: 100%;
+  padding: 45px 25px;
+  background: rgba(255, 253, 247, 0.92);
+  border: 2px solid var(--dourado);
+  border-radius: 25px;
+}
+
+.final h2 {
+  color: var(--rosa-escuro);
+  font-size: clamp(2rem, 7vw, 3rem);
+  margin: 15px 0 20px;
+}
+
+.final h1 {
+  color: var(--rosa-escuro);
+  font-size: clamp(3rem, 10vw, 4.5rem);
+  margin-top: 30px;
+}
+
+.final h3 {
+  font-size: 1.5rem;
+}
+
+.frase-final {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* NAVEGAÇÃO */
+
+.navegacao {
+  position: fixed;
+  z-index: 30;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92%, 480px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255, 248, 233, 0.96);
+  border: 2px solid var(--dourado);
+  border-radius: 40px;
+  box-shadow: 0 5px 20px rgba(73, 48, 35, 0.18);
+}
+
+.botao-navegacao {
+  border: none;
+  border-radius: 25px;
+  padding: 11px 17px;
+  background: var(--rosa-escuro);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-navegacao:hover:not(:disabled) {
+  background: var(--marrom);
+  transform: scale(1.04);
+}
+
+.botao-navegacao:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+#numeroPagina {
+  color: var(--marrom);
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-local,
+.evento-conteudo,
+.historia-conteudo,
+.final-conteudo {
+  animation: aparecer 1s ease both;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+  .abertura-conteudo,
+  .hero-conteudo,
+  .evento-conteudo,
+  .historia-conteudo,
+  .final-conteudo {
+    padding: 25px 18px;
+  }
+
+  .hero,
+  .evento,
+  .historia,
+  .final {
+    padding: 20px 15px 85px;
+  }
+
+  .foto-principal {
+    width: min(210px, 60%);
+    margin: 5px auto 12px;
+  }
+
+  .hero h2 {
+    margin-bottom: 10px;
+  }
+
+  .contador {
+    gap: 6px;
+  }
+
+  .tempo {
+    padding: 12px 4px;
+  }
+
+  .tempo small {
+    font-size: 0.65rem;
+  }
+
+  .informacao-evento {
+    padding: 11px 14px;
+  }
+
+  .evento h2 {
+    margin: 7px 0 14px;
+  }
+
+  .contagem {
+    margin-top: 18px;
+  }
+
+  .contagem h3 {
+    margin-bottom: 10px;
+  }
+
+  .navegacao {
+    bottom: 10px;
+    padding: 8px 10px;
+  }
+
+  .botao-navegacao {
+    padding: 10px 13px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .hero-conteudo {
+    padding: 18px 20px;
+  }
+
+  .foto-principal {
+    width: min(180px, 35vh);
+    margin: 4px auto 10px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 8vh, 4rem);
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  .evento-conteudo {
+    padding: 16px 20px;
+  }
+
+  .informacao-evento {
+    padding: 9px 13px;
+  }
+
+  .card-local {
+    gap: 8px;
+  }
+
+  .contagem {
+    margin-top: 14px;
+  }
+
+  .contagem h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .tempo {
+    padding: 9px 5px;
+  }
+
+  .historia-conteudo,
+  .final-conteudo {
+    padding: 25px 20px;
+  }
+}

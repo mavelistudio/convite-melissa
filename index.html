@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melissa | 2 Aninhos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Luckiest+Guy&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ABERTURA -->
+  <section id="abertura" class="abertura">
+    <div class="abertura-conteudo">
+      <p class="pequeno-texto">Você está convidado para uma aventura!</p>
+      <h1>Melissa</h1>
+      <h2>2 aninhos</h2>
+      <p class="frase-abertura">Prepare o chapéu e venha comemorar comigo!</p>
+
+      <button id="abrirConvite" class="botao-abrir">
+        Abrir convite 🤠
+      </button>
+    </div>
+  </section>
+
+  <!-- CONVITE -->
+  <main id="convite" class="convite escondido">
+
+    <!-- PÁGINA 1: APRESENTAÇÃO -->
+    <section class="hero pagina ativa" data-pagina="0">
+      <div class="hero-conteudo">
+        <p class="subtitulo">Um dia especial está chegando...</p>
+
+        <h1>Melissa</h1>
+        <h2>2 aninhos</h2>
+
+        <img
+          src="foto-principal.png"
+          alt="Melissa"
+          class="foto-principal"
+        >
+
+        <p class="texto-hero">
+          Entre chapéus, botas e muita alegria,
+          nossa pequena boiadeirinha vai completar
+          dois aninhos!
+        </p>
+
+        <p class="destaque-hero">
+          E você é nosso convidado especial!
+        </p>
+      </div>
+    </section>
+
+    <!-- PÁGINA 2: HISTÓRIA -->
+    <section class="historia pagina" data-pagina="1">
+      <div class="historia-conteudo">
+        <p class="subtitulo">É hora de comemorar!</p>
+
+        <h2>Prepare o coração!</h2>
+
+        <p>
+          Dois aninhos de muito amor, sorrisos e descobertas!
+          Vamos celebrar esse momento com uma festinha cheia
+          de carinho e diversão.
+        </p>
+
+        <p>
+          Esperamos você para viver esse dia tão especial
+          ao lado da nossa pequena boiadeirinha!
+        </p>
+      </div>
+    </section>
+
+    <!-- PÁGINA 3: INFORMAÇÕES DO EVENTO -->
+    <section class="evento pagina" data-pagina="2">
+      <div class="evento-conteudo">
+        <p class="subtitulo">Anote na agenda</p>
+        <h2>Nosso encontro</h2>
+
+        <div class="card-local">
+          <div class="informacao-evento">
+            <span class="icone">📅</span>
+            <div>
+              <strong>Data</strong>
+              <p>06 de dezembro de 2026</p>
+            </div>
+          </div>
+
+          <div class="informacao-evento">
+            <span class="icone">⏰</span>
+            <div>
+              <strong>Horário</strong>
+              <p>Das 16h às 18h</p>
+            </div>
+          </div>
+
+          <div class="informacao-evento">
+            <span class="icone">📍</span>
+            <div>
+              <strong>Local</strong>
+              <p>Casa da Tia Ana Paula</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTAGEM REGRESSIVA -->
+        <div class="contagem">
+          <h3>Contagem regressiva</h3>
+
+          <div class="contador">
+            <div class="tempo">
+              <span id="dias">00</span>
+              <small>Dias</small>
+            </div>
+
+            <div class="tempo">
+              <span id="horas">00</span>
+              <small>Horas</small>
+            </div>
+
+            <div class="tempo">
+              <span id="minutos">00</span>
+              <small>Minutos</small>
+            </div>
+
+            <div class="tempo">
+              <span id="segundos">00</span>
+              <small>Segundos</small>
+            </div>
+          </div>
+
+          <p id="mensagemContagem" class="mensagem-contagem">
+            Estamos esperando por você!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PÁGINA 4: ENCERRAMENTO -->
+    <section class="final pagina" data-pagina="3">
+      <div class="final-conteudo">
+        <p class="subtitulo">Com carinho...</p>
+
+        <h2>Esperamos você!</h2>
+
+        <p>
+          Será uma alegria ter você pertinho da gente
+          para comemorar os dois aninhos da Melissa.
+        </p>
+
+        <h1>Melissa</h1>
+        <h3>2 aninhos 🤠</h3>
+
+        <p class="frase-final">
+          Um dia de amor, alegria e muita diversão!
+        </p>
+      </div>
+    </section>
+
+    <!-- NAVEGAÇÃO -->
+    <nav class="navegacao" aria-label="Navegação do convite">
+      <button id="paginaAnterior" class="botao-navegacao" disabled>
+        ← Voltar
+      </button>
+
+      <span id="numeroPagina">1 de 4</span>
+
+      <button id="proximaPagina" class="botao-navegacao">
+        Próxima →
+      </button>
+    </nav>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
